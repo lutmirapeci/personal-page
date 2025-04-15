@@ -1,8 +1,25 @@
-import React from 'react';
+import React from "react";
+// components
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+import Certifications from "./components/Certifications";
 
-function App() {
-  const value = 'World';
-  return <div>Hello {value}</div>;
-}
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutMe />
+      <Projects />
+      <Certifications />
+      <ContactForm />
+      <Footer />
+    </>
+  );
+};
 
 export default App;
