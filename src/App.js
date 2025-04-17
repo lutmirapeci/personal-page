@@ -1,22 +1,39 @@
 import React from "react";
-// components
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
-import Certifications from "./components/Certifications";
+// libs
+import { Route, Switch } from "react-router-dom";
+// sections
+import Navbar from "./sections/Navbar";
+import HeroSection from "./sections/HeroSection";
+import AboutMe from "./sections/AboutMe";
+import Projects from "./sections/Projects";
+import ContactForm from "./sections/ContactForm";
+import Footer from "./sections/Footer";
+import Certifications from "./sections/Certifications";
+// pages
+import MyWork from "./pages/MyWork";
+// hooks
+import ScrollToHash from "./hooks/ScrollToHash";
 
 const App = () => {
   return (
     <>
+      <ScrollToHash />
       <Navbar />
-      <HeroSection />
-      <AboutMe />
-      <Projects />
-      <Certifications />
-      <ContactForm />
+
+      <Switch>
+        <Route exact path="/">
+          <HeroSection />
+          <AboutMe />
+          <Projects />
+          <Certifications />
+          <ContactForm />
+        </Route>
+
+        <Route path="/my-work">
+          <MyWork />
+        </Route>
+      </Switch>
+
       <Footer />
     </>
   );

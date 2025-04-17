@@ -1,0 +1,349 @@
+:root {
+  --white: #ffffff;
+  --blue: #4c74b4;
+  --black: #000000;
+  --light-gray: #edecec;
+  --off-white: #f8f8f8;
+  --gray-border: #d9d9d9;
+  --dark-gray: #424242;
+  --sky-blue: #4baeea;
+  --dark-bg: #1e1e1e;
+  --deep-dark: #121212;
+  --text-muted: #797979;
+  --text-light: #afafaf;
+  --bg-soft: #fff8f8;
+  --red: #c43366bd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--white);
+  font-size: 1.3rem !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.custom-btn {
+  background-color: var(--blue) !important;
+  color: var(--white) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 2rem !important;
+  font-size: 1.2rem !important;
+}
+
+.custom-btn:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem var(--dark-gray);
+  background-color: var(--sky-blue) !important;
+  color: var(--light-gray) !important;
+}
+
+.custom-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 0.5rem 1rem var(--dark-gray);
+}
+
+.custom-outline-btn {
+  background-color: transparent !important;
+  color: var(--white) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+  font-size: 1rem !important;
+}
+
+.custom-outline-btn:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem var(--dark-gray);
+  background-color: var(--sky-blue) !important;
+  color: var(--light-gray) !important;
+}
+
+.custom-outline-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 0.5rem 1rem var(--dark-gray);
+}
+
+.blue {
+  color: var(--blue) !important;
+}
+
+.sky-blue {
+  color: var(--sky-blue) !important;
+}
+
+.light {
+  color: var(--text-light) !important;
+}
+
+/* navbar */
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='skyblue' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* projects section */
+.flip-card {
+  background-color: transparent;
+  height: 30rem;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 3rem;
+}
+
+.flip-card-front .project-title {
+  position: absolute;
+  bottom: 6rem;
+}
+
+.flip-card-back {
+  color: var(--white);
+  transform: rotateY(180deg);
+}
+
+/* certifications */
+.certification-img-wrapper {
+  overflow-x: auto;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.certification-img {
+  display: flex;
+  gap: 2rem;
+  min-width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.certification-img-wrapper:hover .certification-img {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+}
+
+.card {
+  width: 20rem;
+  overflow: hidden;
+  background: linear-gradient(315deg, var(--blue), var(--red)) !important;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-wrapper {
+  height: 12rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.card-img-wrapper img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.card-body {
+  height: 5rem;
+}
+
+/* footer */
+#footer a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#footer a i {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#footer a i:hover {
+  color: var(--sky-blue);
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* my work page */
+
+#my-work .card {
+  background: transparent !important;
+  transition: none;
+}
+
+#my-work .card:hover {
+  transform: none;
+}
+
+/* media queries */
+
+/* four-k-display */
+@media screen and (min-width: 1551px) and (max-width: 2560px) {
+  .flip-card-front .project-title {
+    bottom: 2rem;
+  }
+}
+
+/* large display */
+@media screen and (min-width: 1205px) and (max-width: 1550px) {
+  .flip-card-front .project-title {
+    bottom: 5rem;
+  }
+}
+
+/* medium display */
+@media screen and (min-width: 1024px) and (max-width: 1204px) {
+  body {
+    font-size: 1rem !important;
+  }
+
+  .custom-btn {
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+
+  .flip-card-front .project-title {
+    bottom: -2rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  body {
+    font-size: 1rem !important;
+  }
+
+  .custom-btn {
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .certification-img {
+    animation-duration: 25s;
+  }
+
+  .flip-card-front .project-title {
+    bottom: -1rem;
+  }
+}
+
+/* Mobile */
+@media screen and (min-width: 432px) and (max-width: 768px) {
+  body {
+    font-size: 1rem !important;
+  }
+
+  .custom-btn {
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .flip-card {
+    height: 28rem;
+  }
+
+  .flip-card-front .project-title {
+    bottom: 1rem;
+  }
+
+  .certification-img {
+    animation-duration: 20s;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 431px) {
+  body {
+    font-size: 1rem !important;
+  }
+
+  .custom-btn {
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .flip-card {
+    height: 18rem;
+  }
+
+  .flip-card-front .project-title {
+    bottom: -1rem;
+  }
+
+  .certification-img {
+    animation-duration: 15s;
+  }
+}

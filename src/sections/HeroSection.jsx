@@ -1,12 +1,12 @@
 import React from "react";
 // images
-import heroImg from "../assets/me.png";
+import heroImg from "../assets/images/me.png";
 
 const HeroSection = () => {
   return (
     <section className="bg-dark text-white py-5 border-top" id="hero">
       <div className="wrap">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center align-items-center">
           <div className="col-lg-8 text-center text-lg-start">
             <h1 className="display-4 fw-bold">Lutmira Peci</h1>
             <h2 className="sky-blue h3 fw-bold mb-3">Frontend Web Developer</h2>
@@ -23,7 +23,7 @@ const HeroSection = () => {
             </a>
           </div>
           <div className="col-lg-4 text-center mt-4 mt-lg-0">
-            <img src={heroImg} alt="Lutmira Peci" />
+            <img className="hero-img" src={heroImg} alt="Lutmira Peci" />
           </div>
         </div>
       </div>
