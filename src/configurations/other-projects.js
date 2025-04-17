@@ -46,26 +46,6 @@ const projects = [
     image: recipes,
     repoLink: "https://github.com/lutmirapeci/recipes-js",
   },
-  {
-    image: urbanGarden,
-    repoLink: "https://github.com/lutmirapeci/urban_garden_restaurant",
-  },
-  {
-    image: urbanGarden,
-    repoLink: "https://github.com/lutmirapeci/urban_garden_restaurant",
-  },
-  {
-    image: urbanGarden,
-    repoLink: "https://github.com/lutmirapeci/urban_garden_restaurant",
-  },
-  {
-    image: urbanGarden,
-    repoLink: "https://github.com/lutmirapeci/urban_garden_restaurant",
-  },
-  {
-    image: urbanGarden,
-    repoLink: "https://github.com/lutmirapeci/urban_garden_restaurant",
-  },
 ];
 
 export default projects;
